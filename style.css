@@ -84,7 +84,8 @@ header:after{
 }
 h1{
 	float:left;
-	margin:30px 0 0 40px !important;
+	margin:30px 0 0 40px;
+	font-size:100%;
 }
 h1 i{
 	background: url(images/beard.png);
