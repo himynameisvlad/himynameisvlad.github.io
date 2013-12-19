@@ -19,7 +19,8 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
 body { 
 	background: white; 
 	line-height: 1; 
-	color: black; 
+	color: black;
+	overflow:hidden;
 	} 
 ol, ul { 
 	list-style: none; 
