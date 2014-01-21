@@ -13,9 +13,9 @@
 			}
 			)
 			$("#about-cl").on("click",function(){
-				$(".about").animate({opacity:"1"},1000).show(1000)
+				$(".about").animate({opacity:"1"},1000).show(1000).stop()
 			});
 			$("#skills").on("click",function(){
-				$(".about").animate({opacity:"0"},1000).hide(1000)
+				$(".about").animate({opacity:"0"},1000).hide(1000).stop()
 			})
 		})
