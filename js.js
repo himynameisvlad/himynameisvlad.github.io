@@ -13,7 +13,7 @@
 			}
 			)
 			$("#about-cl").on("click",function(){
-				$(".about").animate({opacity:"1"},1000).show()
+				$(".about").animate({opacity:"1"},1000).show(1000)
 			});
 			$("#skills").on("click",function(){
 				$(".about").animate({opacity:"0"},1000).hide(1000)
