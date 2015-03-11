@@ -51,7 +51,7 @@ var events_obj = {
 	if(isIE() == 8){
 		console.log('ie8')
 	}else {
-		console.log('not')
+		console.log(isIE())
 	}
 
 	var inputsCollection = document.querySelectorAll('input[type=text]'),
