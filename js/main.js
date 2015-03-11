@@ -60,10 +60,10 @@ var events_obj = {
 	inputs_b_collection = table_b.getElementsByTagName('input'),
 	inputs_c_collection = table_c.getElementsByTagName('input'),
 
-	add_row_btn = document.getElementsByClassName('add-row')[0],
-	add_col_btn = document.getElementsByClassName('add-col')[0],
-	del_row_btn = document.getElementsByClassName('del-row')[0],
-	del_col_btn = document.getElementsByClassName('del-col')[0],
+	add_row_btn = document.querySelectorAll('.add-row')[0],
+	add_col_btn = document.querySelectorAll('.add-col')[0],
+	del_row_btn = document.querySelectorAll('.del-row')[0],
+	del_col_btn = document.querySelectorAll('.del-col')[0],
 
 	inputs = Array.prototype.slice.call(inputsCollection),
 	inputs_a = Array.prototype.slice.call(inputs_a_collection),
