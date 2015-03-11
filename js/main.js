@@ -38,11 +38,21 @@ var events_obj = {
 	}
 };
 
-
 (function(){
 
-
+"use strict";
 //
+
+	function isIE () {
+		var myNav = navigator.userAgent.toLowerCase();
+		return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+	}
+
+	if(isIE() == 8){
+		console.log('ie8')
+	}else {
+		console.log('not')
+	}
 
 	var inputsCollection = document.querySelectorAll('input[type=text]'),
 
@@ -65,12 +75,12 @@ var events_obj = {
 	del_row_btn = document.querySelectorAll('.del-row')[0],
 	del_col_btn = document.querySelectorAll('.del-col')[0],
 
+	warning_mess = document.getElementById('warning').getElementsByTagName('p')[0],
+
 	inputs = Array.prototype.slice.call(inputsCollection),
 	inputs_a = Array.prototype.slice.call(inputs_a_collection),
 	inputs_b = Array.prototype.slice.call(inputs_b_collection),
 	inputs_c = Array.prototype.slice.call(inputs_c_collection),
-
-	warning_mess = document.getElementById('warning').getElementsByTagName('p')[0],
 
 	inputsFocus = function (e) {
 
@@ -105,7 +115,7 @@ var events_obj = {
 
 	inputsValueCoord = function (item) {
 
-		var table_parent = item.parentNode.parentNode.parentNode.parentNode;
+		var table_parent = item.parentNode.parentNode.parentNode.parentNode,
 		td_parent = item.parentNode, tr_parent = item.parentNode.parentNode;
 		item.style.color = '#c9c9c9';
 
