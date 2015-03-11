@@ -420,37 +420,41 @@ var events_obj = {
 
 		if((rows_top * cols_top) === (rows_bot * cols_bot) && (cols_top === rows_bot)){
 
-			for(var c = table_c.rows.length - 1; c >= 0; c--){
-				table_c.deleteRow(c);
-			};
-
-
-			for (var i = 0; i < rows_top; i++) {
-				table_c.insertRow(i);
-			};
-
-
-			for (var k = 0; k < cols_bot; k++) {
-				console.log(k)
+				for (var k = 0; k < cols_bot; k++) {
 				for (var i = 0; i < rows_top; i++) {
 					var sum = 0;
 					for (var j = 0; j < rows_bot; j++){
 						sum +=  parseFloat(top_table.rows[i].cells[j].childNodes[0].value) * parseFloat(bot_table.rows[j].cells[k].childNodes[0].value);
 					}
-					var new_cell = table_c.rows[i].insertCell(-1),
-					new_input = document.createElement('input');
+					if(!isNaN(sum)){
 
-					new_input.type = 'text';
-					new_cell.appendChild(new_input);
-					new_input.value = parseFloat(sum);
-					new_input.setAttribute('disabled', true);
-					new_input.setAttribute('data-cell',  (k + 1)  + "" + (i + 1));
+						for(var c = table_c.rows.length - 1; c >= 0; c--){
+							table_c.deleteRow(c);
+						};
 
-					if(new_input.getAttribute('disabled')){
-						new_input.parentNode.style.background = 'rgba(0,0,0, .15)';
+
+						for (var d = 0; d < rows_top; d++) {
+							table_c.insertRow(d);
+						};
+
+						var new_cell = table_c.rows[i].insertCell(-1),
+						new_input = document.createElement('input');
+
+
+						new_input.type = 'text';
+						new_cell.appendChild(new_input);
+						new_input.value = parseFloat(sum);
+						new_input.setAttribute('disabled', true);
+						new_input.setAttribute('data-cell', (k + 1) + "" + (i + 1));
+
+						if(new_input.getAttribute('disabled')){
+							new_input.parentNode.style.background = 'rgba(0,0,0, .15)';
+						}
+
+						inputs_c[new_input.getAttribute('data-cell')] = new_input;
+					}else{
+						return false
 					}
-
-					inputs_c[new_input.getAttribute('data-cell')] = new_input;
 				};
 			};
 		}else{
