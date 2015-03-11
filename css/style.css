@@ -457,17 +457,24 @@ aside {
 	margin-right: 10px;
 }
 
+#warning p {
+	color: #da0902;
+	display: none;
+	margin-top: 50px;
+	padding-right: 42px;
+}
+
 /* main */
 main {
 	margin-left: 333px;
-	padding: 15px 0 0 40px;
 	min-width: 100%;
+	padding: 15px 0 0 40px;
 }
 main:after {
+	clear: both;
 	content: ".";
 	display: block;
 	height: 0;
-	clear: both;
 	visibility: hidden;
 }
 
@@ -475,8 +482,8 @@ main:after {
 	border: 2px solid #434343;
 	display: inline-block;
 	height: inherit;
-	width: 10px;
 	position: absolute;
+	width: 10px;
 }
 .left-bracket {
 	border-right: none;
@@ -487,23 +494,23 @@ main:after {
 	top: 0; bottom: 0; right: 0;
 }
 tr {
-	margin-bottom: 10px;
-	display: block;
 	clear: both;
+	display: block;
+	margin-bottom: 10px;
 }
 tr:after {
+	clear: both;
 	content: ".";
 	display: block;
 	height: 0;
-	clear: both;
 	visibility: hidden;
 }
 tr:last-child {
 	margin: 0;
 }
 tr td {
-	margin-right: 10px;
 	float: left;
+	margin-right: 10px;
 ;
 	display: inline-block;
 }
@@ -515,33 +522,31 @@ tr td:last-child {
 .result,
 .top-matrix,
 .bot-matrix {
-	position: relative;
-	padding: 10px;
 	display: inline-block;
 	float: left;
+	padding: 10px;
+	position: relative;
 
 }
 .result {
 	margin-right: 40px;
 }
 .top-matrix .descript {
-	content: 'A';
-	top: 36%; right: -40px;
-	position: absolute;
 	font-size: 2rem;
+	position: absolute;
+	top: 36%; right: -40px;
 }
 .bot-matrix {
-	display: inline-block;
 	clear: left;
+	display: inline-block;
 	margin-top: 40px;
 }
 .bot-matrix .descript {
-	content: 'B';
-	right:0; bottom: -40px;
-	width: 100%;
-	position: absolute;
 	font-size: 2rem;
+	position: absolute;
+	right:0; bottom: -40px;
 	text-align: center;
+	width: 100%;
 }
 
 /*-----------------

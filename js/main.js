@@ -70,6 +70,8 @@ var events_obj = {
 	inputs_b = Array.prototype.slice.call(inputs_b_collection),
 	inputs_c = Array.prototype.slice.call(inputs_c_collection),
 
+	warning_mess = document.getElementById('warning').getElementsByTagName('p')[0],
+
 	inputsFocus = function (e) {
 
 		events_obj.prevent_default(e);
@@ -396,6 +398,20 @@ var events_obj = {
 
 	},
 
+	setWarning = function () {
+		if(warning_mess.style.display !== 'block'){
+			aside.style.backgroundColor = '#f6c1c0';
+			warning_mess.style.display = 'block';
+		}
+	},
+
+	clearWarning = function () {
+		if(warning_mess.style.display == 'block'){
+			aside.style.backgroundColor = '#bcbcbc';
+			warning_mess.style.display = 'none';
+		}
+	},
+
 	multiplyMatrix = function () {
 		var top_table = document.getElementsByClassName('top-matrix')[0].getElementsByTagName('table')[0],
 		bot_table = document.getElementsByClassName('bot-matrix')[0].getElementsByTagName('table')[0],
@@ -437,7 +453,9 @@ var events_obj = {
 					inputs_c[new_input.getAttribute('data-cell')] = new_input;
 				};
 			};
-		};
+		}else{
+			setWarning();
+		}
 	};
 
 
@@ -454,7 +472,9 @@ var events_obj = {
 	};
 
 	events_obj.add_event(document.getElementById('clear-matrix'), 'click', inputsClearAll);
+	events_obj.add_event(document.getElementById('clear-matrix'), 'click', clearWarning);
 	events_obj.add_event(document.getElementById('swap-matrix'), 'click', swapMatrix);
+
 
 	events_obj.add_event(document.getElementById('label-A') , 'click', btnsCheckTableA);
 	events_obj.add_event(document.getElementById('label-B') , 'click', btnsCheckTableB);
@@ -462,5 +482,5 @@ var events_obj = {
 	events_obj.add_event(document.getElementById('multiply-btn'), 'click', multiplyMatrix);
 
 	events_obj.add_event(document.getElementsByClassName('editing-controls')[0], 'click', editingMatrix);
-
+	events_obj.add_event(document.getElementsByClassName('editing-controls')[0], 'click', clearWarning);
 })()
