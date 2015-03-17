@@ -1,150 +1,80 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]> <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>SKB Kontur test task</title>
+	<title></title>
 
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--Styles-->
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<!--Media queries-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!--[if gte IE 9]><link rel="stylesheet" href="css/ie9.css" media="screen, projection"><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" media="screen, projection"><![endif]-->
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('main');
+		document.createElement('aside');
+	</script>
+	<![endif]-->
+
 </head>
 <body>
+
 	<!-- wrapper -->
 	<div class="wrapper">
-		<aside>
-			<div class="multiply">
-				<button id="multiply-btn">Умножить матрицы</button>
+		<h1>Миронов Владислав</h1>
+		<h2>Front-end разработчик, веб-дизайнер</h2>
+
+		<!-- info -->
+		<div class="info">
+
+			<!-- contacts -->
+			<div class="contacts">
+				<phone>8 (950) 837 88 46</phone><br>
+				<a href="mailto:hellothereiamvlad@gmail.com">hellothereiamvlad@gmail.com</a><br>
+				<a href="http://behance.net/himynameisvlad" target="_blank">www.behance.net/himynameisvlad</a>
 			</div>
-			<div class="clear-fields">
-				<button class="grey-btn" id="clear-matrix"><i></i>Очистить матрицы</button>
+			<!-- // contacts -->
+
+			<!-- about -->
+			<div class="about info-item">
+				<h3>О себе</h3>
+				<p>Работать в веб-индустрии начал чуть больше года назад. За этот год выбирал специализацию между дизайнером и разработчиком. Оказалось, что меня больше интересует front end разработка и в последние пару месяцев углубился в ее изучение. Свои навыки оцениваю на уровне ниже среднего, но готов быстро и стремительно развиваться под руководством наставника</p>
 			</div>
-			<div class="swap">
-				<button class="grey-btn" id="swap-matrix"><i></i>Поменять матрицы местами</button>
+			<!-- // about -->
+
+			<!-- expirience -->
+			<div class="expirience info-item">
+				<h3>Опыт работы</h3>
+				<div class="exp-item"><span class="who">Дизайнер </span><span class="where">Рекламное агенство «Брусилов»</span><span class="when">январь 2014 - май 2014</span></div>
+				<div class="exp-item"><span class="who">Веб-Дизайнер, верстальщик </span><span class="where">ООО Кофелэнд</span><span class="when">май 2014 - январь 2015</span></div>
+				<div class="exp-item"><span class="who">Веб-Дизайнер </span><span class="where">Фриланс</span><span class="when">январь 2015 - май 2015</span></div>
 			</div>
-			<!-- options -->
-			<div class="options">
-				<ul>
-					<li>
-						<input id="switch-A" type="radio" name="radio" checked>
-						<label id="label-A" for="switch-A" class="switch-label"><i></i>Матрица A</label>
-					</li>
-					<li>
-						<input id="switch-B" type="radio" name="radio">
-						<label id="label-B" for="switch-B" class="switch-label"><i></i>Матрица B</label>
-					</li>
-				</ul>
+			<!-- // expirience -->
+
+			<!-- skills -->
+			<div class="skills info-item">
+				<h3>Навыки</h3>
+				<p>Хорошее знание HTML, CSS, графических редакторов Adobe</p>
+				<p>Адаптивная и валидная верстка</p>
+				<p>Базовые знания Javascript, jquery, Wordpress</p>
+				<p>Знакомство с инструментами разработчика (Sass, gulp or grunt, git, google)</p>
+				<p>Начальные знания php, MySql</p>
+				<p>Английский язык на уровне чтения технической документации</p>
 			</div>
-			<!-- options end -->
-			<!-- editing controls -->
-			<div class="editing-controls">
-				<ul>
-					<li><button class="grey-btn add add-row"><i></i>Добавить</button></li>
-					<li><button class="grey-btn del del-row"><i></i>Удалить</button></li>
-					<li><span>строку</span></li>
-				</ul>
-				<ul>
-					<li><button class="grey-btn add add-col"><i></i>Добавить</button></li>
-					<li><button class="grey-btn del del-col"><i></i>Удалить</button></li>
-					<li>столбец</li>
-				</ul>
-				<div id="warning">
-					<p>Такие матрицы нельзя перемножить, так как количество столбцов матрицы А не равно количеству строк матрицы В</p>
-				</div>
-			</div>
-			<!-- editing controls end -->
-		</aside>
-		<main role="main">
-			<!-- result -->
-			<div class="result f-left">
-				<strong class="left-bracket"></strong>
-					<table data-matrix="c" class="matrix" id="table-c">
-						<tr>
-							<td><input type="text" disabled="disabled"></td>
-							<td><input type="text" disabled="disabled"></td>
-							<td><input type="text" disabled="disabled"></td>
-						</tr>
-						<tr>
-							<td><input type="text" disabled="disabled"></td>
-							<td><input type="text" disabled="disabled"></td>
-							<td><input type="text" disabled="disabled"></td>
-						</tr>
-						<tr>
-							<td><input type="text" disabled="disabled"></td>
-							<td><input type="text" disabled="disabled"></td>
-							<td><input type="text" disabled="disabled"></td>
-						</tr>
-						<tr>
-							<td><input type="text" disabled="disabled"></td>
-							<td><input type="text" disabled="disabled"></td>
-							<td><input type="text" disabled="disabled"></td>
-						</tr>
-					</table>
-				<strong class="right-bracket f-right"></strong>
-			</div>
-			<!-- result -->
-			<!-- top matrix -->
-			<div class="top-matrix">
-				<strong class="left-bracket f-left"></strong>
-					<table data-matrix="a" id="table-a">
-						<tr>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-						</tr>
-						<tr>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-						</tr>
-						<tr>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-						</tr>
-						<tr>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-						</tr>
-					</table>
-				<strong class="right-bracket"></strong>
-				<div class="descript">
-					<span>A</span>
-				</div>
-			</div>
-			<!-- top matrix end -->
-			<br>
-			<!-- bot matrix -->
-			<div class="bot-matrix">
-				<strong class="left-bracket"></strong>
-					<table data-matrix="b" id="table-b">
-						<tr>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-						</tr>
-						<tr>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-							<td><input type="text"></td>
-						</tr>
-					</table>
-				<strong class="right-bracket"></strong>
-				<div class="descript">
-					<span>B</span>
-				</div>
-			</div>
-			<!-- bot matrix end -->
-		</main>
+			<!-- // skills -->
+
+		</div>
+		<!-- // info -->
+
 	</div>
-	<!-- wrapper end -->
+	<!-- // wrapper -->
+
 	<script src="js/main.js"></script>
 </body>
 </html>

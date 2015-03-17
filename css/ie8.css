@@ -1,0 +1,132 @@
+html.ie8 {
+	background-color: #fff;
+}
+
+/* -----
+Buttons 
+----- */
+
+html.ie8 .grey-btn {
+	background: none;
+}
+html.ie8 .grey-btn:before {
+	background: none;
+}
+html.ie8 .grey-btn i:before {
+	content: '';
+}
+
+/* clear-btn */
+
+html.ie8 #clear-matrix {
+	background: url(../img/clear-btn.png) no-repeat;
+	background-position: 0px 0;
+	line-height: 32px;
+	padding: 0 12px 0 22px;
+}
+html.ie8 #clear-matrix:hover {
+	background-position: 0px -70px;
+}
+html.ie8 #clear-matrix:active {
+	background-position: 0px -103px;
+}
+html.ie8 #clear-matrix:focus {
+	background-position: 0px -33px;
+	line-height: 36px;
+}
+
+/* clear-btn end */
+
+/* swap-btn */
+
+html.ie8 #swap-matrix {
+	background: url(../img/swap-btn.png) no-repeat;
+	background-position: 0px 0;
+	line-height: 32px;
+	padding: 0 12px 0 22px;
+}
+html.ie8 #swap-matrix:hover {
+	background-position: 0px -70px;
+}
+html.ie8 #swap-matrix:active {
+	background-position: 0px -103px;
+}
+html.ie8 #swap-matrix:focus {
+	background-position: 0px -33px;
+	line-height: 36px;
+}
+
+/* swap-btn end */
+
+/* add-btn */
+
+html.ie8 button.add {
+	background: url(../img/add-btn.png) no-repeat;
+	background-position: 0px 0;
+	line-height: 32px;
+	padding: 0 12px 0 22px;
+}
+html.ie8 button.add:hover {
+	background-position: 0px -70px;
+}
+html.ie8 button.add:active {
+	background-position: 0px -103px;
+}
+html.ie8 button.add:focus {
+	background-position: 0px -33px;
+	line-height: 36px;
+}
+
+/* add-btn end */
+
+/* del-btn */
+
+html.ie8 button.del {
+	background: url(../img/del-btn.png) no-repeat;
+	background-position: 0px 0;
+	line-height: 32px;
+	padding: 0 12px 0 22px;
+}
+html.ie8 button.del:hover {
+	background-position: 0px -70px;
+}
+html.ie8 button.del:active {
+	background-position: 0px -103px;
+}
+html.ie8 button.del:focus {
+	background-position: 0px -33px;
+	line-height: 36px;
+}
+
+/* del-btn end */
+
+/* radio-buttons states */
+
+input[type="radio"] + label > i {
+	background: none;
+}
+input[type="radio"] + label i:before {
+	background: url(../img/radio.png) no-repeat;
+	width: 18px;
+	height: 18px;
+	background-position: -1px -2px;
+}
+
+input[type="radio"] + label.active > i:before {
+	background: url(../img/radio.png) no-repeat;
+	background-position: -1px -59px;
+}
+input[type="radio"]:focus + label > i {
+	outline: 0;
+	background: none;
+}
+
+/* radio-buttons states  end */
+
+/* margin */
+html.ie8 td.last-cell {
+	margin-right: 0;
+}
+html.ie8 tr.last-row td{
+	margin-bottom: 0;
+}
