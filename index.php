@@ -13,7 +13,7 @@
 </head>
 <body>
 	<form action="test.php" method="POST">
-		<input type="text"><input type="submit">
+		<input type="text" name="test"><input type="submit">
 	</form>
 	<div id="wrapper">
 
