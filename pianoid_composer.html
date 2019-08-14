@@ -93,7 +93,7 @@ document.getElementsByTagName("head")[0].appendChild(script);
  
     tp = window["tp"] || [];
     tp.push(["setAid", "So1c9clPc4"]);
-    tp.push(["setEndpoint", "http://192.168.1.43:8000/api/v3"]);
+    tp.push(["setEndpoint", "http://192.168.1.43:8080/api/v3"]);
     tp.push(['setUsePianoIdUserProvider', true ]);
     tp.push(['setPianoIdUrl', '/']);
 
@@ -146,7 +146,7 @@ document.getElementsByTagName("head")[0].appendChild(script);
         var a = document.createElement("script");
         a.type = "text/javascript";
         a.async = true;
-        a.src = "http://192.168.1.43:8000/api/tinypass.min.js";
+        a.src = "http://192.168.1.43:8080/api/tinypass.min.js";
         var b = document.getElementsByTagName("script")[0];
         b.parentNode.insertBefore(a, b)
     })();
